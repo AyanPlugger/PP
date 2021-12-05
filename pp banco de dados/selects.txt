@@ -1,0 +1,28 @@
+-- mostrando livros inferiores a 5 anos --
+select * from livros
+where datapublicacao > '2016-01-01';
+
+
+-- livros com geracoes no nome --
+SELECT * FROM tblivros
+WHERE nomelivro LIKE '%geraçoes%';
+
+
+-- livros publicados fora do brasil --
+SELECT * FROM livros
+WHERE localpublicacao NOT LIKE 'brasil';
+
+
+-- editoras em ordem alfabetica --
+SELECT * FROM livros
+ORDER BY editora ASC;
+
+
+-- pessoas que nasceram na decada de 80 a 90 --
+SELECT * FROM cliente
+WHERE nascimento between '1980-01-01' and '1999-12-31';
+
+
+-- livros com tecnologia da informacao --
+SELECT * FROM tblivros
+WHERE nome = 'tecnologia da informacao';
